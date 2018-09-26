@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+       xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Facelet Title</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>  
+    </h:head>
+
+    <h:body>
+
+        <div class="alert alert-primary" a:role="alert">
+            <h:outputText  value="#{controler.mensaje}"></h:outputText>
+        </div>
+
+
+        <h:form>
+            <br></br>
+            <div class="container">   
+                <table class="table table-bordered">
+                    <tr>
+                        <td>
+                            Nombre: 
+                        </td>
+                        <td>
+                            <h:outputText value="#{controler.usuario.nombre}"></h:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Apellido: 
+                        </td>
+                        <td>
+                            <h:outputText value="#{controler.usuario.apellido}"></h:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Tipo de documento: 
+                        </td>
+                        <td>
+                            <h:outputText value="#{controler.usuario.tipoDocumento}"></h:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Número documento: 
+                        </td>
+                        <td>
+                            <h:outputText value="#{controler.usuario.numeroDocumento}"></h:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Dirección: 
+                        </td>
+                        <td>
+                            <h:outputText value="#{controler.usuario.direccion}"></h:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Movil: 
+                        </td>
+                        <td>
+                            <h:outputText value="#{controler.usuario.numeroCelular}"></h:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Barrio: 
+                        </td>
+                        <td>
+                            <h:outputText value="#{controler.usuario.barrio}"></h:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Comuna: 
+                        </td>
+                        <td>
+                            <h:outputText value="#{controler.usuario.comuna}"></h:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Teléfono: 
+                        </td>
+                        <td>
+                            <h:outputText value="#{controler.usuario.telefono}"></h:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Email: 
+                        </td>
+                        <td>
+                            <h:outputText value="#{controler.usuario.email}"></h:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Sexo: 
+                        </td>
+                        <td>
+                            <h:outputText value="#{controler.usuario.sexo}"></h:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Eps: 
+                        </td>
+                        <td>
+                            <h:outputText value="#{controler.usuario.eps}"></h:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Pensión: 
+                        </td>
+                        <td>
+                            <h:outputText value="#{controler.usuario.pension}"></h:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Arl: 
+                        </td>
+                        <td>
+                            <h:outputText value="#{controler.usuario.arl}"></h:outputText>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </h:form> 
+
+        <div class="form-row">
+            <div class="form-group col-md-2">   
+
+                <a class="btn btn-primary" href="index.xhtml" role="button">Volver</a>
+            </div>
+        </div>
+    </h:body>
+</html>
