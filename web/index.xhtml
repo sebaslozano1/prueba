@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+
+    <head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1" />
+
+    </head>
+    <body>
+
+
+
+        <div class="container"> 
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="/prueba/">San ambiente</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Mapa <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <h:form  >
+
+                <fieldset style="width:800px" >
+                    <legend> Datos personales</legend>
+                    <div class="form-row">
+                        <div class="form-group col-md-5">
+                            <label for="inputState">Tipo documento</label>
+                            <h:selectOneMenu class="form-control"  value = "#{controler.usuario.tipoDocumento}"> 
+                                <f:selectItem itemValue = "Cedula de ciudadania" itemLabel = "Cédula de ciudadanía   " /> 
+                                <f:selectItem itemValue = "Cedula de extranjeria" itemLabel = "Cédula de extranjería" /> 
+                                <f:selectItem itemValue = "Tarjeta de identidad" itemLabel = "Tarjeta de identidad" /> 
+                            </h:selectOneMenu> 
+                        </div> 
+
+                        <div class="form-group col-md-5">
+                            <label for="inputEmail4">Número documento</label>
+                            <h:inputText  a:type="number" class="form-control"  value="#{controler.usuario.numeroDocumento}" id="numeroDocumento" />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-5">
+                            <label for="inputEmail4">Nombre</label>
+                            <h:inputText a:type="text" class="form-control"  value="#{controler.usuario.nombre}" id="nombre" />
+                        </div>
+                        <div class="form-group col-md-5">
+                            <label for="inputEmail4">Apellido</label>
+                            <h:inputText a:type="text" class="form-control"  value="#{controler.usuario.apellido}" id="apellido" />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-5">
+                            <label for="inputEmail4">Dirección</label>
+                            <h:inputText a:type="text" class="form-control"  value="#{controler.usuario.direccion}" id="direccion" />
+                        </div>
+                        <div class="form-group col-md-5">
+                            <label for="inputEmail4">Movil</label>
+                            <h:inputText a:type="number" class="form-control"  value="#{controler.usuario.numeroCelular}" id="celular" />
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-row">
+                        <div class="form-group col-md-5">
+                            <label for="inputEmail4">Teléfono</label>
+                            <h:inputText a:type="number" class="form-control"  value="#{controler.usuario.telefono}" id="telefono" />
+                        </div>
+                        <div class="form-group col-md-5">
+                            <label for="email">Email</label>
+                            <h:inputText a:type="email" class="form-control"  value="#{controler.usuario.email}" id="email" />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-5">
+                            <label for="inputEmail4">Barrio</label>
+                            <h:inputText a:type="text" class="form-control"  value="#{controler.usuario.barrio}" id="barrio" />
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputState">Comuna</label>
+                            <h:selectOneMenu class="form-control"  value = "#{controler.usuario.comuna}"> 
+                                <f:selectItem itemValue = "Uno" itemLabel = "Uno" /> 
+                                <f:selectItem itemValue = "Dos" itemLabel = "Dos" /> 
+                                <f:selectItem itemValue = "Tres" itemLabel = "Tres" /> 
+                            </h:selectOneMenu> 
+                        </div>
+                   
+
+                   
+                        <div class="form-group col-md-3">
+                            <label for="inputState">Sexo</label>
+                            <h:selectOneMenu class="form-control"  value = "#{controler.usuario.sexo}"> 
+                                <f:selectItem itemValue = "Masculino" itemLabel = "Masculino" /> 
+                                <f:selectItem itemValue = "Femenino" itemLabel = "Femenino" />  
+                            </h:selectOneMenu> 
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset style="width:800px" >
+                    <legend> Otros datos</legend>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="inputState">Eps</label>
+                            <h:selectOneMenu class="form-control"  value = "#{controler.usuario.eps}"> 
+                                <f:selectItem itemValue = "Coomeva" itemLabel = "Coomeva" /> 
+                                <f:selectItem itemValue = "Emsanar" itemLabel = "Emsanar" />  
+                            </h:selectOneMenu> 
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputState">Pensión</label>
+                            <h:selectOneMenu class="form-control"  value = "#{controler.usuario.pension}"> 
+                                <f:selectItem itemValue = "Pension de Vejez" itemLabel = "Pensión de Vejez" /> 
+                                <f:selectItem itemValue = "Pension de Invalidez" itemLabel = "Pensión de Invalidez" />  
+                            </h:selectOneMenu> 
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputState">Arl</label>
+                            <h:selectOneMenu class="form-control"  value = "#{controler.usuario.arl}"> 
+                                <f:selectItem itemValue = "Colseguros" itemLabel = "Colseguros" /> 
+                                <f:selectItem itemValue = "Arl nacional" itemLabel = "Arl nacional" />  
+                            </h:selectOneMenu> 
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="form-row">
+
+                    <div class="form-group col-md-2">  
+                        <h:commandButton   action="#{controler.save()}" class="btn btn-success" value="Guardar"></h:commandButton>
+
+                    </div>
+                </div>
+
+            </h:form>
+
+            <h:outputText  value="#{controler.mensaje}" style="color:green;"></h:outputText>
+
+        </div>
+
+    </body>
+</html>
